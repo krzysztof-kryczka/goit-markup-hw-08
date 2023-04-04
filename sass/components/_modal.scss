@@ -1,0 +1,191 @@
+.backdrop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: getBackgroundColor('grey-light');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-property: visibility, opacity;
+    transition-duration: 250ms;
+    transition-timing-function: getAnimation('cubic-bezier');
+}
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.is-hidden .modal {
+    transform: scale(2);
+}
+
+.modal {
+    position: absolute;
+    width: 528px;
+    height: 581px;
+    background-color: getColor('light');
+    box-shadow: getBoxShadow('card');
+    transition: transform 250ms getAnimation('cubic-bezier');
+
+    &__close {
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        top: 8px;
+        right: 8px;
+        border: 1px solid getBackgroundColor('grey-light');
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 25px;
+        background-color: getColor('light');
+    }
+
+    &__title {
+        @include font($fw: 700, $fs: 20px, $lh: 23px, $ls: 0.03em);
+        text-align: center;
+        color: getColor('primary');
+        margin-top: 40px;
+    }
+
+    &__form {
+
+        & > label {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__label {
+        position: relative;
+        max-width: 448px;
+        margin: 0 auto;
+    }
+
+    &__text {
+        @include font($fs: 12px, $lh: 14px, $ls: 0.01em);
+        color: getColor('grey');
+        margin-top: 12px;
+        margin-bottom: 4px;
+    }
+
+    &__input {
+        border: 1px solid getBackgroundColor('grey-form');
+        border-radius: $br4;
+        height: 40px;
+        position: relative;
+        padding-left: 42px;
+        transition-property: outline-color, fill, border-color;
+        transition-duration: 250ms;
+        transition-timing-function: getAnimation('cubic-bezier');
+    }
+
+    &__icon {
+        position: absolute;
+        height: 18px;
+        width: 18px;
+        left: 12px;
+        top: 40px;
+    }
+
+    &__textarea {
+        border: 1px solid getBackgroundColor('grey-form');
+        border-radius: $br4;
+        max-height: 120px;
+        resize: none;
+        padding-top: 12px;
+        padding-left: 16px;
+        transition-property: outline-color, fill, border-color;
+        transition-duration: 250ms;
+        transition-timing-function: getAnimation('cubic-bezier');
+
+        &::placeholder {
+            font-size: 12px;
+            line-height: 1.17;
+            letter-spacing: 0.01em;
+            color: getBackgroundColor('grey-medium');
+        }
+    }
+
+    &__checkbox {
+        display: block;
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    &__checkboxtext {
+        @include font($fs: 14px, $lh: 24px, $ls: 0.03em);
+        color: getColor('grey');
+        margin-left: 77px;
+    }
+
+    &__link {
+        color: getColor('secondary');
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    &__checkbox input {
+        position: absolute;
+        opacity: 0;
+        cursor: none;
+        height: 0;
+        width: 0;
+    }
+
+    &__checkmark {
+        position: absolute;
+        top: 4px;
+        left: 55px;
+        height: 15px;
+        width: 16px;
+        background-color: getColor('light');
+        border: 2px solid getColor('primary');
+        border-radius: 2px;
+        cursor: pointer;
+    }
+
+    &__checkbox input:checked~&__checkmark {
+        background-color: getColor('secondary');
+        border: 2px solid getColor('secondary');
+    }
+
+    &__checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    &__checkbox input:checked~&__checkmark:after {
+        display: block;
+    }
+
+    &__checkbox &__checkmark:after {
+        /* content: '✓'; */
+        content: '🗸';
+        left: 1px;
+        top: -1px;
+        color: getColor('light');
+        font-weight: 900;
+        font-size: 14px;
+    }
+
+    &__input:is(:focus, :active),
+    &__input:where(:focus, :active)+&__icon,
+    &__textarea:is(:focus, :active) {
+        fill: getColor('secondary');
+        border-color: getColor('secondary');
+        outline: none;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+}
+
+}

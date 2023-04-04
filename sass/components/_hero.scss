@@ -1,0 +1,19 @@
+.hero {
+        @include flex-center;
+        background-color: getColor('first-bgc');
+        text-align: center;
+        padding: 200px 0;
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header_hero_brand.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+
+    &__title {
+        @include font($fw: 900, $fs: 44px, $lh: 60px, $ls: 0.06em);
+        color: getColor('light');
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 0 200px;
+    }
+
+}

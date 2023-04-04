@@ -1,0 +1,36 @@
+.offers {
+
+    text-align: center;
+
+    &__title {
+        @include title;
+    }
+
+    &__list {
+        @include flex-center;
+        gap: 30px;
+    }
+
+    &__item {
+        position: relative;
+
+        & >img {
+                vertical-align: middle;
+            }
+    }
+
+    &__subtitle {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding-top: 27px;
+        padding-bottom: 27px;
+
+        @include font($fw: 700, $fs: 14px, $lh: 16px, $ls: 0.03em);
+        text-transform: uppercase;
+        color: getColor('light');
+        background: getBackgroundColor('grey');
+    }
+
+}

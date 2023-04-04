@@ -1,0 +1,25 @@
+@use "sass:math";
+
+@mixin font($fs: 14px, $fw: null, $lh: 24px, $ls: 0.03em) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: round($lh, $fs, 2);
+    letter-spacing: $ls;
+}
+
+@function round($lh, $fs, $commaDecimals: 1) {
+    $value: math.div($lh, $fs);
+    $power: math.pow(10, $commaDecimals);
+    @return math.div(math.round($power * $value), $power);
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin title {
+    @include font($fw: 700, $fs: 36px, $lh: 42px, $ls: 0.03em);
+    margin-bottom: 50px;
+}

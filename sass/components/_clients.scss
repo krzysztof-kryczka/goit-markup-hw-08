@@ -1,0 +1,30 @@
+.clients {
+    text-align: center;
+
+    &__item {
+        @include flex-center;
+        gap: 30px;
+    }
+
+    &__title {
+        @include title;
+    }
+
+    &__link {
+        width: 170px;
+        height: 92px;
+        border: 1px solid getColor('tertiary');
+        border-radius: $br4;
+        @include flex-center;
+        fill: getColor('tertiary');
+        padding: 16px 32px;
+        transition-property: fill, border-color;
+        transition-duration: 250ms;
+        transition-timing-function: getAnimation('cubic-bezier');
+
+         &:is(:hover, :focus) {
+            border-color: getColor('secondary');
+            fill: getColor('secondary');
+         }
+    }
+}

@@ -1,0 +1,32 @@
+.advantages {
+    text-align: left;
+
+    &__list {
+        @include flex-center;
+        gap: 30px;
+    }
+
+    &__item {
+
+    }
+
+     &__icon {
+        padding: 25px 100px;
+        width: 270px;
+        height: 120px;
+        background: getColor('secondary-bgc');
+        border-radius: $br4;
+     }
+
+     &__title {
+        @include font($fw: 700, $fs: 14px, $lh: 16px, $ls: 0.03em);
+        text-transform: uppercase;
+        margin-top: 30px;
+     }
+
+     &__text {
+        @include font($fs: 14px, $lh: 24px, $ls: 0.03em);
+        color: getColor('grey');
+        margin-top: 10px;
+     }
+}

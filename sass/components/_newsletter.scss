@@ -1,0 +1,48 @@
+.newsletter {
+    margin-top: 12px;
+    margin-left: 70px;
+
+    &__tittle {
+        text-transform: uppercase;
+        color: getColor('light');
+        font-size: 14px;
+        line-height: 1.15;
+        margin-bottom: 20px;
+    }
+
+    &__input {
+        height: 50px;
+        width: 358px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 16px;
+        background-color: transparent;
+        color: getColor('light');
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: $br4;
+
+        &:focus {
+            outline: none;
+            border-color: getColor('secondary');
+        }
+
+        &::placeholder {
+            color: rgba(255, 255, 255, .6);
+    }
+    }
+    
+    &__button {
+        margin-left: 12px;
+        display: inline-flex;
+        align-items: center;
+        fill: getColor('light');
+        padding: 11px 28px 10px 42px;
+
+        & > svg {
+            margin-left: 22px;
+        }
+    }    
+
+} 
+ 

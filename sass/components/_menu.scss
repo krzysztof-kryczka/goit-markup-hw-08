@@ -1,0 +1,34 @@
+.menu {
+        @include flex-center;
+        gap: 46px;
+
+        &__item {
+            @include font($fw: 500, $fs: 14px, $lh: 16px, $ls: 0.02em);
+        }
+
+        &__link {
+            color: getColor('primary');
+            display: flex;
+            transition: color 250ms getAnimation('cubic-bezier');
+
+            &:is(:hover, :focus) {
+                color: getColor('secondary');
+            }
+        }
+}
+
+.is-active {
+    position: relative;
+    color: getColor('secondary');
+}
+            
+.is-active::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    top: 44px;
+    border-radius: 2px;
+    background-color: getColor('secondary');
+}

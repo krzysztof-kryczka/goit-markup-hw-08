@@ -1,0 +1,28 @@
+.filters {
+
+    &__list {
+        @include flex-center;
+        margin-bottom: 50px;
+        gap: 10px;
+    }
+
+    &__item {
+
+    }
+
+    &__button {
+        color: getColor('primary');
+        max-height: 38px;
+        width: auto;
+        background-color: getColor('secondary-bgc');
+        @include font($fw: 500, $fs: 16px, $lh: 26px, $ls: 0.03em);
+        padding: 0px 22px;
+        box-shadow: none;
+
+        &:is(:hover, :focus) {
+            color: getColor('light');
+            background-color: getColor('secondary');
+            box-shadow: getBoxShadow('filter');
+        }
+    }
+}

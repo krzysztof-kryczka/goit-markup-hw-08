@@ -1,0 +1,37 @@
+.team {
+    text-align: center;
+
+    &__title {
+        @include title;
+    }
+
+    &__list { 
+        @include flex-center;
+        gap: 30px;
+    }
+    
+    &__item {
+        background-color: getColor('light');
+        box-shadow: getBoxShadow('card');
+        border-radius: 0px 0px 4px 4px;
+    }
+
+    & figcaption {
+        padding: 30px 0;
+    }
+
+    &__description {
+        @include font($fw: 500, $fs: 16px, $lh: 19px, $ls: 0.03em);
+    
+        &--name {     
+            padding-bottom: 10px;
+        }
+
+        &--text {
+            color: getColor('grey');
+            font-weight: 400;
+            padding-bottom: 16px;
+        }
+
+    }
+}

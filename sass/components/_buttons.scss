@@ -1,0 +1,22 @@
+.button {
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    border-radius: $br4;
+
+    font-family: inherit;
+    @include font($fw: 700, $fs: 16px, $lh: 30px, $ls: 0.06em);
+
+    box-shadow: getBoxShadow('button');
+    background-color: getColor('secondary');
+    color: getColor('light');
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: getAnimation('cubic-bezier');
+
+    &:is(:hover, :focus) {
+        background-color: rgb(25 117 191);
+    }
+}

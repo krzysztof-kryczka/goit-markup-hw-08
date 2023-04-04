@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: {
+        family: getFont('rob');
+    }
+    color: getColor('primary');
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &--silver {
+        background-color: getColor('secondary-bgc');
+    }
+
+    &--top-fix {
+        margin-top: -94px;
+    }
+
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer {
+    background-color: getColor('first-bgc');
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &__flex{
+        display: flex;
+    }
+}
+
+header {
+    border-bottom: 1px solid #ECECEC;
+}
+
+.header {
+    padding-top: 24px;
+    padding-bottom: 24px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
