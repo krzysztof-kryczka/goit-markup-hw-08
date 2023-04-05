@@ -23,3 +23,26 @@
     @include font($fw: 700, $fs: 36px, $lh: 42px, $ls: 0.03em);
     margin-bottom: 50px;
 }
+
+$phone-end: 767px;
+$tablet-start: 768px;
+$tablet-end: 1199px;
+$desktop-start: 1200px;
+
+@mixin phone {
+    @media screen and (min-width: #{$phone-end}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: #{$tablet-start}) and (max-width: #{$tablet-end}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: #{$desktop-start}) {
+        @content;
+    }
+}
