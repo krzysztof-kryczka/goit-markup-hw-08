@@ -5,6 +5,7 @@
         font-style: normal;
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     &__item {
@@ -17,10 +18,17 @@
         text-decoration: none;
         margin-top: 9px;
         transition: color 250ms var(--brand-function-cubic);
+        width: fit-content;
 
         &:is(:hover, :focus) {
             color: getColor('secondary');
         }
     }
 
+}
+
+@media screen and (min-width: 1200px) {
+    .address--footer {
+        align-items: flex-start;
+    }
 }
