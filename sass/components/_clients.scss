@@ -4,6 +4,7 @@
     &__item {
         @include flex-center;
         gap: 30px;
+        flex-wrap: wrap;
     }
 
     &__title {
@@ -21,10 +22,25 @@
         transition-property: fill, border-color;
         transition-duration: 250ms;
         transition-timing-function: getAnimation('cubic-bezier');
+        flex-basis: calc((100% - 30px) / 2);
+
 
          &:is(:hover, :focus) {
             border-color: getColor('secondary');
             fill: getColor('secondary');
          }
+    }
+}
+
+@media screen and  (min-width: 768px) and (max-width: 1199px) {
+    .clients__item {
+        flex-basis: calc((100% - 40px) / 3);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .clients__item {
+        flex-wrap: nowrap;
+        flex-basis: auto;
     }
 }
