@@ -52,7 +52,7 @@
 
 @media (min-width: 320px) and (max-width: 767px) {
 
-.social {
+.social--footer {
         margin-top: 60px;
         align-items: center;
     }
@@ -60,14 +60,14 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-    .social {
-        // margin-top: 12px;
-        // margin-left: 70px;
+    .social--footer {
+        margin-top: 12px;
+        margin-left: 70px;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .social {
+    .social--footer {
         margin-top: 12px;
         margin-left: 70px;
     }

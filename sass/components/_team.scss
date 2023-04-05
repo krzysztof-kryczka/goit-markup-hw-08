@@ -8,6 +8,7 @@
     &__list { 
         @include flex-center;
         gap: 30px;
+        flex-wrap: wrap;
     }
     
     &__item {
@@ -33,5 +34,17 @@
             padding-bottom: 16px;
         }
 
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .team__item {
+        flex-basis: calc((100% - 30px) / 2);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .team__list {
+        flex-wrap: nowrap;
     }
 }
