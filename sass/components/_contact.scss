@@ -4,6 +4,12 @@
     align-items: center;
     gap: 30px;
 
+    @include tablet {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
     &__link {
         color: getColor('grey');
         display: flex;
@@ -12,6 +18,10 @@
         fill: getColor('grey');
         transition: color 250ms getAnimation('cubic-bezier'),
         fill 250ms getAnimation('cubic-bezier');
+
+        @include tablet {
+            @include font($fw: 500, $fs: 12px, $lh: 14px, $ls: 0.02em);
+        }
 
         &:is(:hover, :focus) {
             color: getColor('secondary');
