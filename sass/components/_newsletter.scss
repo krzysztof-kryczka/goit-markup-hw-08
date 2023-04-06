@@ -1,6 +1,6 @@
 .newsletter {
 
-    
+    margin-top: 60px;
 
     &__tittle {
         text-transform: uppercase;
@@ -15,6 +15,10 @@
         flex-direction: column;
         align-items: center;
         gap: 20px;
+
+        @include desktop {
+            flex-direction: row;
+        }
     }
 
     &__input {
@@ -29,6 +33,10 @@
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
         border-radius: $br4;
 
+        @include tablet {
+            width: 450px;
+        }
+
         &:focus {
             outline: none;
             border-color: getColor('secondary');
@@ -36,7 +44,7 @@
 
         &::placeholder {
             color: rgba(255, 255, 255, .6);
-    }
+        }
     }
     
     &__button {
@@ -49,28 +57,9 @@
             margin-left: 22px;
         }
     }    
-
-} 
- 
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
     
-    .newsletter {
-        margin-top: 60px;
-    }
-    .newsletter__input{
-        width: 450px;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-
-    .newsletter {
+    @include desktop {
         margin-top: 12px;
         margin-left: 70px;
     }
-
-    .newsletter__form {
-        flex-direction: row;
-    }
-}
+} 
