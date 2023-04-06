@@ -2,18 +2,61 @@
         @include flex-center;
         background-color: getColor('first-bgc');
         text-align: center;
-        padding: 200px 0;
+        padding: 118px 0;
         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header_hero_brand.jpg);
         background-repeat: no-repeat;
         background-position: center;
+        background-size: cover;
+
+        @include desktop {
+            padding: 200px 0;
+            background-size: auto;
+        }
+
+   
 
     &__title {
-        @include font($fw: 900, $fs: 44px, $lh: 60px, $ls: 0.06em);
+        @include font($fw: 900, $fs: 26px, $lh: 42px, $ls: 0.06em);
         color: getColor('light');
         text-transform: uppercase;
         text-align: center;
-        margin-bottom: 30px;
-        padding: 0 200px;
+        width: 365px;
+        
+
+        @include desktop {
+            // padding: 0 225px;
+            width: 696px;
+            @include font($fw: 900, $fs: 44px, $lh: 60px, $ls: 0.06em);
+        }
+
     }
 
 }
+
+.aaa {
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+}
+
+
+
+ /* Nadpisujemy ścieżkę do obrazu 2x,
+   jeśli gęstość ekranu wynosi co najmniej 2 */
+ @media (min-device-pixel-ratio: 2),
+ (min-resolution: 192dpi),
+ (min-resolution: 2dppx) {
+     .hero {
+         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header_hero_brand@2x.jpg);
+     }
+ }
+
+ @media (min-device-pixel-ratio: 3),
+ (min-resolution: 288dpi),
+ (min-resolution: 3dppx) {
+     .hero {
+         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header_hero_brand@3x.jpg);
+     }
+ }
