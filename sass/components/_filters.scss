@@ -1,9 +1,23 @@
 .filters {
+    margin-bottom: 40px;
+
+    @include tablet {
+        margin-bottom: 30px;
+    }
 
     &__list {
-        @include flex-center;
-        margin-bottom: 50px;
+        @include flex-center;    
+        justify-content: flex-start;
         gap: 10px;
+        flex-flow: row wrap;
+
+        @include tablet {
+            justify-content: center;
+        }
+        
+        @include desktop {
+            justify-content: center;
+        }
     }
 
     &__item {

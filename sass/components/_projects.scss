@@ -2,12 +2,32 @@
 
     &__list {
         @include flex-center;
-        flex-wrap: wrap;
+        flex-direction: column;
         gap: 30px;
+
+        @include tablet {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        @include desktop {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
     }
 
     &__item {
         cursor: pointer;
+
+        width: 100%;
+
+        @include tablet {
+            flex-basis: calc((100% - 30px) / 2);
+        }
+
+        @include desktop {
+            width: auto;
+        }
 
         &:is(:hover, :focus){
             box-shadow: getBoxShadow('gallery');
@@ -21,12 +41,12 @@
 
     &__photo {
         position: relative;
-        width: 370px;
-        height: 294px;
         overflow: hidden;
         
         & > img {
             vertical-align: middle;
+            width: 100%;
+            height: auto;
         }
 
         &--overlay {

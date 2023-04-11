@@ -5,6 +5,16 @@
         @include flex-center;
         gap: 30px;
         flex-wrap: wrap;
+
+        @include tablet {
+            flex-basis: calc((100% - 40px) / 3);
+        }
+
+        @include desktop {
+            flex-wrap: nowrap;
+            flex-basis: auto;
+        }
+
     }
 
     &__title {
@@ -32,15 +42,4 @@
     }
 }
 
-@media screen and  (min-width: 768px) and (max-width: 1199px) {
-    .clients__item {
-        flex-basis: calc((100% - 40px) / 3);
-    }
-}
 
-@media screen and (min-width: 1200px) {
-    .clients__item {
-        flex-wrap: nowrap;
-        flex-basis: auto;
-    }
-}

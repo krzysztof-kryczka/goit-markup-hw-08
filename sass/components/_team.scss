@@ -10,6 +10,10 @@
         gap: 30px;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        @include desktop {
+            flex-wrap: nowrap;
+        }
     }
     
     &__item {
@@ -17,6 +21,11 @@
         box-shadow: getBoxShadow('card');
         border-radius: 0px 0px 4px 4px;
         width: 100%;
+
+        @include tablet {
+            flex-basis: calc((100% - 30px) / 2);
+        }
+
     }
 
     &__photo {
@@ -42,17 +51,5 @@
             padding-bottom: 16px;
         }
 
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-    .team__item {
-        flex-basis: calc((100% - 30px) / 2);
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .team__list {
-        flex-wrap: nowrap;
     }
 }
