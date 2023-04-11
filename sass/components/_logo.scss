@@ -2,10 +2,25 @@
     @include font($fw: 700, $fs: 26px, $lh: 31px, $ls: 0.03em);
     font-family: getFont('ral');
     color: getColor('secondary');
-    margin-right: 93px;
+    
+    @include tablet {
+        margin-right: 83px;
+    }
+    
+    @include desktop {
+        margin-right: 93px;
+    }
+
 
     &--footer {
-        margin-right: 0px;
+
+        @include tablet {
+            margin-right: 0px;
+        }
+
+        @include desktop {
+            margin-right: 0px;
+        }
     }
 
     &--white {
@@ -14,11 +29,5 @@
 
     &--black {
         color: black;
-    }
-}
-
-@media screen and (max-width: 1199px) {
-    .logo {
-        margin-right: 0;
     }
 }

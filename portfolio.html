@@ -22,7 +22,9 @@
             Web<span class="logo logo--black">Studio</span></a
           >
           <ul class="menu">
-            <li class="menu__item"><a class="menu__link" href="./index.html">Agencja</a></li>
+            <li class="menu__item">
+              <a class="menu__link" href="./index.html">Agencja</a>
+            </li>
             <li class="menu__item">
               <a class="menu__link is-active" href="./portfolio.html">Portfolio</a>
             </li>
@@ -42,6 +44,62 @@
             </svg>
             +48 111 111 111</a
           >
+        </div>
+
+        <!-- MENU MOBILE -->
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="hamburger__icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-mobile-menu-open"></use>
+          </svg>
+        </button>
+        <!-- /MENU MOBILE -->
+      </div>
+
+      <div class="hamburger js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+          <svg class="hamburger__icon hamburger__icon--close" width="40" height="40">
+            <use href="images/icons.svg#icon-mobile-menu-close"></use>
+          </svg>
+        </button>
+
+        <div class="hamburger__content">
+          <ul class="hamburger__list">
+            <li class="hamburger__item">
+              <a href="index.html" class="hamburger__link">Agencja</a>
+            </li>
+            <li class="hamburger__item">
+              <a href="portfolio.html" class="hamburger__link">Portfolio</a>
+            </li>
+            <li class="hamburger__item">
+              <a href="#" class="hamburger__link">Kontakt</a>
+            </li>
+          </ul>
+          <div class="hamburger__contacts">
+            <span class="hamburger__tel">
+              <a href="tel:+48111111111" class="hamburger__tel hamburger__tel--link"
+                >+48 111 111 111</a
+              >
+            </span>
+            <span class="hamburger__mail">
+              <a href="mailto:info@devstudio.com" class="hamburger__mail hamburger__mail--link"
+                >info@devstudio.com</a
+              >
+            </span>
+            <ul class="hamburger__socials">
+              <li class="hamburger__socials hamburger__socials--item">
+                <a class="hamburger__socials hamburger__socials--link" href="#">Instagram</a>
+              </li>
+              <li class="hamburger__socials hamburger__socials--item">
+                <a class="hamburger__socials hamburger__socials--link" href="#">Twitter</a>
+              </li>
+              <li class="hamburger__socials hamburger__socials--item">
+                <a class="hamburger__socials hamburger__socials--link" href="#">Facebook</a>
+              </li>
+              <li class="hamburger__socials hamburger__socials--item">
+                <a class="hamburger__socials hamburger__socials--link" href="#">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -284,45 +342,47 @@
 
     <footer class="footer">
       <div class="footer__flex container">
-        <div class="address">
-          <a class="logo" href="index.html" title="Strona główna">
-            Web<span class="logo logo--white logo--footer">Studio</span></a
-          >
-          <address class="address address--footer">
-            <span class="address__item">m. Warszawa, Aleje Jerozolimskie 21</span>
-            <a class="address__link" href="mailto:info@example.com">info@example.com</a>
-            <a class="address__link" href="tel:+48111111111">+48 111 111 111</a>
-          </address>
-        </div>
-        <div class="social social--footer">
-          <p class="social__title social__title--footer">Dołącz do nas</p>
-          <div class="social__links">
-            <a class="social__link social__link--footer" href="#" target="_blank">
-              <svg width="20" height="20">
-                <use href="./images/icons.svg#icon-instagram"></use>
-              </svg>
-            </a>
-            <a class="social__link social__link--footer" href="#" target="_blank">
-              <svg width="20" height="20">
-                <use href="./images/icons.svg#icon-twitter"></use>
-              </svg>
-            </a>
-            <a class="social__link social__link--footer" href="#" target="_blank">
-              <svg width="20" height="20">
-                <use href="./images/icons.svg#icon-facebook"></use>
-              </svg>
-            </a>
-            <a class="social__link social__link--footer" href="#" target="_blank">
-              <svg width="20" height="20">
-                <use href="./images/icons.svg#icon-linkedin"></use>
-              </svg>
-            </a>
+        <div class="footer__contacts">
+          <div class="address">
+            <a class="logo logo--footer" href="index.html" title="Strona główna">
+              Web<span class="logo logo--white logo--footer">Studio</span></a
+            >
+            <address class="address address--footer">
+              <span class="address__item">m. Warszawa, Aleje Jerozolimskie 21</span>
+              <a class="address__link" href="mailto:info@example.com">info@example.com</a>
+              <a class="address__link" href="tel:+48111111111">+48 111 111 111</a>
+            </address>
+          </div>
+          <div class="social social--footer">
+            <p class="social__title social__title--footer">Dołącz do nas</p>
+            <div class="social__links">
+              <a class="social__link social__link--footer" href="#" target="_blank">
+                <svg width="20" height="20">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+              <a class="social__link social__link--footer" href="#" target="_blank">
+                <svg width="20" height="20">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+              <a class="social__link social__link--footer" href="#" target="_blank">
+                <svg width="20" height="20">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+              <a class="social__link social__link--footer" href="#" target="_blank">
+                <svg width="20" height="20">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
 
         <div class="newsletter">
           <h4 class="newsletter__tittle">Zapisz się do newslettera</h4>
-          <form action="" name="newsletter-form">
+          <form class="newsletter__form" action="" name="newsletter-form">
             <label for="">
               <input
                 type="email"
@@ -331,16 +391,25 @@
                 placeholder="E-mail"
                 class="newsletter__input"
               />
-              <button type="submit" class="button newsletter__button">
-                <span>Zapisz się</span>
-                <svg width="24" height="24">
-                  <use href="./images/icons.svg#icon-send"></use>
-                </svg>
-              </button>
             </label>
+            <button type="submit" class="button newsletter__button">
+              <span>Zapisz się</span>
+              <svg width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>
     </footer>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
