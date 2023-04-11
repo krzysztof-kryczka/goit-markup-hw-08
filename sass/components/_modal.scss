@@ -25,11 +25,16 @@
 
 .modal {
     position: absolute;
-    width: 528px;
-    height: 581px;
+    min-height: 581px;
+    max-width: 450px;
+    padding: 40px 40px;
     background-color: getColor('light');
     box-shadow: getBoxShadow('card');
     transition: transform 250ms getAnimation('cubic-bezier');
+
+    @include desktop {
+        max-width: 528px;
+    }
 
     &__close {
         position: absolute;
@@ -48,7 +53,6 @@
         @include font($fw: 700, $fs: 20px, $lh: 23px, $ls: 0.03em);
         text-align: center;
         color: getColor('primary');
-        margin-top: 40px;
     }
 
     &__form {
