@@ -5,10 +5,22 @@
         @include flex-center;
         gap: 30px;
         flex-wrap: wrap;
+
+        @include desktop {
+            flex-wrap: nowrap;
+        }
     }
 
     &__item {
+      width: 450px;
 
+      @include tablet {
+         width: 354px;
+      }
+      
+      @include desktop {
+         width: 270px;
+      }
     }
 
      &__icon {
@@ -24,6 +36,11 @@
         text-transform: uppercase;
         margin-top: 30px;
         text-align: center;
+
+        @include desktop {
+            text-align: left;
+        }
+
      }
 
      &__text {
@@ -33,24 +50,3 @@
      }
 }
 
- @include tablet {
-
-   .advantages__item {
-      flex-basis: calc((100% - 30px) / 2);
-   }
-
- }
-
-@include desktop {
-   .advantages__list {
-      flex-wrap: nowrap;  
-   }
-
-   .advantages__item {
-      flex-basis: auto;
-   }
-
-   .advantages__title {
-      text-align: left;
-   }
-}      

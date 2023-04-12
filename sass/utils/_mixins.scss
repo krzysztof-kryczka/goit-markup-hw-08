@@ -21,7 +21,12 @@
 
 @mixin title {
     @include font($fw: 700, $fs: 36px, $lh: 42px, $ls: 0.03em);
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    
+    @include desktop {
+        margin-bottom: 50px;
+    }
+    
 }
 
 $phone-end: 767px;
