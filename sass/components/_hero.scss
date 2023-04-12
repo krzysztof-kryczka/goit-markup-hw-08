@@ -15,10 +15,7 @@
 
    &__item {
        display: flex;
-       flex-direction: column;
        justify-content: center;
-       align-items: center;
-       gap: 30px;
    }
 
     &__title {
@@ -27,7 +24,7 @@
         text-transform: uppercase;
         text-align: center;
         width: 365px;
-        
+        padding: 0px 0px 30px 0px;
 
         @include desktop {
             // padding: 0 225px;
