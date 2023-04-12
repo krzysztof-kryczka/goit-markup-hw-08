@@ -20,13 +20,14 @@
         cursor: pointer;
 
         width: 100%;
-
+        width: 450px;
+        
         @include tablet {
-            flex-basis: calc((100% - 30px) / 2);
+            width: 354px;
         }
-
+        
         @include desktop {
-            width: auto;
+            width: 370px;
         }
 
         &:is(:hover, :focus){

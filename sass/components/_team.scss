@@ -9,7 +9,7 @@
         @include flex-center;
         gap: 30px;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
 
         @include desktop {
             flex-wrap: nowrap;
@@ -20,12 +20,15 @@
         background-color: getColor('light');
         box-shadow: getBoxShadow('card');
         border-radius: 0px 0px 4px 4px;
-        width: 100%;
+        width: 450px;
 
         @include tablet {
-            flex-basis: calc((100% - 30px) / 2);
+            width: 354px;
         }
 
+        @include desktop {
+            width: 270px;
+        }
     }
 
     &__photo {

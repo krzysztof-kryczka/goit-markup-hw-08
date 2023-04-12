@@ -13,7 +13,13 @@
             background-size: auto;
         }
 
-   
+   &__item {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       gap: 30px;
+   }
 
     &__title {
         @include font($fw: 900, $fs: 26px, $lh: 42px, $ls: 0.06em);
@@ -33,13 +39,7 @@
 
 }
 
-.aaa {
-    display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-}
+
 
 
 

@@ -23,6 +23,17 @@
         }
     }
 
+    &--header {
+      
+        @include tablet {
+            margin-right: 0px;
+        }
+        
+        @include desktop {
+            margin-right: 0px;
+        }
+    }
+
     &--white {
         color: white;
     }
